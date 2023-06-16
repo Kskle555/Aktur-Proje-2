@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EntityLayer.Concrete.User
+@using (Html.BeginForm("AddUser", "Admin", FormMethod.Post))
+{
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name)
+    <br />
+    <br />
+    @Html.Label("Surname")
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Surname)
+    <br />
+    <br />
+    @Html.Label("Department")
+    @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.Department)
+    <br />
+    <br />
+  
+
+ 
+    <br />
+    <button class="btn btn-info" type="submit">Kaydet</button>
+}
+
